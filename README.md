@@ -12,5 +12,5 @@ Python interpreter is usually installed into `/usr/local/bin/python3.7`. *Puttin
 
 `/usr/local/python` is also popular location
 
-Second way to start Python interpreter is `python -c "command arg-s"` (analogous to shell).
+Second way to start Python interpreter is `python -c "command arg-s"` (analogous to shell). You can use single or double quotes.
 
