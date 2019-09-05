@@ -165,3 +165,8 @@ If you need to modify sequence you are iterating over while, it is recommended t
 
 Object returned by range() behaves as if it is a list, but in fact it isn't. It is an object which returns successive items of desired sequence when you iterate over it, but it doesn't really make list, thus saving space.
 
+## 4.4 break and continue Statements and else Clauses on Loops
+
+`break` (like in C) breaks (`for`, `while`) innermost enclosing. 
+`else` loop statement is executed when loop terminates through exhaustion of list (with `for`) or when condition becomes false (with `while`), but not when loop is terminated by `break` statement. 
+
