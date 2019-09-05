@@ -26,3 +26,7 @@ When known to interpreter, script name and additional arg-s thereafter are turne
     python3.7 test.py # import sys, print(sys.argv)
     Output: ['test.py']
 
+## 2.1.2 Interactive Mode
+
+When commands are read from tty, interpreter is said to be in *interactive mode*.
+
