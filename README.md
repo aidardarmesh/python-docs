@@ -75,3 +75,10 @@ If you don't want char-s prefaced by **\\** to be interpreted as special char-s,
     >>> print(r'C:\some\name') # note r before quote
     C:\some\name
 
+Strings can be concatenated with `+` and repeated with `*`. Two or more *string literals* next to each other are automatically concatenated:
+
+    'Py' 'thon'
+    'Python'
+
+This feature is useful to break long strings.
+
