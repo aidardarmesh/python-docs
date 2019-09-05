@@ -127,9 +127,10 @@ All slice operations return new list containing requested elem-s (example below)
 
 *Multiple assignment*:
 
-    a, b = 0, 1
-    while (a < 10):
-        a, b = b, a+b
+    >>> a, b = 0, 1
+    >>> while (a < 10):
+    ...     print(a)
+    ...     a, b = b, a+b
 
 In Python (like in C) non-zero `int` == True, 0 is False,
 non-zero length string (list) == True, empty == False,
