@@ -16,3 +16,6 @@ Second way to start Python interpreter is `python -c "command [arg]"` (analogous
 
 Modules (scripts) are called by `python -m module [arg]`. To run script and open interactive mode `-i` flag is passed before script.
 
+    python 3.7 -m test.py
+    Output: Hello, world!
+
