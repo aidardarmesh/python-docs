@@ -82,3 +82,4 @@ Strings can be concatenated with `+` and repeated with `*`. Two or more *string 
 
 This feature is useful to break long strings.
 
+There is no separate `char` type. Character is string with size one.
