@@ -48,9 +48,9 @@ By default, Python source files are treated as UTF-8 encoded. To declare encodin
 
 In interactive mode, last printed expression is assigned to `_` variable:
 
-    \>\>\> price = 13.6250
-    \>\>\> price
+    price = 13.6250
+    price
     13.6250
-    \>\>\> round(_, 2)
+    round(_, 2)
     13.63
 
