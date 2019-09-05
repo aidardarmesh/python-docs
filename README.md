@@ -135,3 +135,6 @@ All slice operations return new list containing requested elem-s (example below)
 In Python (like in C) non-zero `int` == True, 0 is False,
 non-zero length string (list) == True, empty == False,
 
+## 4.1 if Statements
+
+if ... elif ... elif ... sequence is substitute for `switch` or `case`.
