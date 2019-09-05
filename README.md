@@ -97,7 +97,7 @@ Python strings are immutable (cannot be changed). `len()` returns length of stri
 ## 3.1.3 Lists
 
 List (mutable) might contain items of different types, can be extended (concatenation) and sliced. 
-All slice operations return new list containing requested elem-s (example below):
+All **slice** operations return new list containing requested elem-s (example below):
 
     >>> squares = [1, 4, 9, 16, 25]
     >>> squares[:]
@@ -138,3 +138,16 @@ non-zero length string (list) == True, empty == False,
 ## 4.1 if Statements
 
 if ... elif ... elif ... sequence is substitute for `switch` or `case`.
+
+## 4.2 for Statements
+
+Iterates over items of any sequence (list, string) in order they appear in sequence. 
+
+If you need to modify sequence you are iterating over while, it is recommended to make a sequence copy firstly. With `for w in words:` would attempt to create infinite list, inserting `defenestrate` over and over again. The reason is that `words[:]` returned limited requested list of items that didn't increase (copy of `words`).
+
+    words = ['cat', 'window', 'defenestrate']
+    for w in words[:]:
+        if len(w) > 6:
+            words.insert(0, w)
+    words
+    ['defenestrate', 'cat', 'window', 'defenestrate']
