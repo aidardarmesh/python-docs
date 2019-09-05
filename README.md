@@ -34,5 +34,7 @@ When commands are read from tty, interpreter is said to be in *interactive mode*
 
 By default, Python source files are treated as UTF-8 encoded. To declare encoding other than default one:
 
-    *# -\*- coding: encoding *
+    # -*- coding: encoding -*-
+
+    Example: # -*- coding: cp1252 -*-
 
