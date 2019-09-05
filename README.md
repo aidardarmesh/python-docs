@@ -11,7 +11,7 @@ that may only be available in binary form.
 
 Python interpreter is usually installed into `/usr/local/bin/python3.7`. *Putting binary to `/usr/local/bin` makes possible to run it from terminal*:
 
-    python 3.7
+    python3.7
 
 `/usr/local/python` is also popular location
 
@@ -22,4 +22,7 @@ Modules (scripts) are called by `python -m module [arg]`. To run script and open
 ## 2.1.1 Argument Passing
 
 When known to interpreter, script name and additional arg-s thereafter are turned into list of strings and assigned to `argv` variable in `sys` module. 
+
+    python3.7 test.py # import sys, print(sys.argv)
+    Output: ['test.py']
 
