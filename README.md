@@ -28,5 +28,4 @@ When known to interpreter, script name and additional arg-s thereafter are turne
 
 ## 2.1.2 Interactive Mode
 
-When commands are read from tty, interpreter is said to be in *interactive mode*.
-
+When commands are read from tty, interpreter is said to be in *interactive mode*, where `>>>` is primary prompt and `...` is secondary prompt. 
