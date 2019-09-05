@@ -163,3 +163,5 @@ If you need to modify sequence you are iterating over while, it is recommended t
     range(-10, -100, -30)
     -10, -40, -70
 
+Object returned by range() behaves as if it is a list, but in fact it isn't. It is an object which returns successive items of desired sequence when you iterate over it, but it doesn't really make list, thus saving space.
+
