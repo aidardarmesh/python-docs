@@ -92,3 +92,4 @@ When `slicing` start is always included and end always excluded.
     'on'
     >>> word[42:]
     ''
+Python strings are immutable (cannot be changed). `len()` returns length of string. 
