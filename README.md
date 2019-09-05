@@ -170,3 +170,10 @@ Object returned by range() behaves as if it is a list, but in fact it isn't. It 
 `break` (like in C) breaks (`for`, `while`) innermost enclosing. 
 `else` loop statement is executed when loop terminates through exhaustion of list (with `for`) or when condition becomes false (with `while`), but not when loop is terminated by `break` statement. 
 
+## 4.5 pass Statements
+
+`pass` does nothing. It can be used when statement is required syntactically:
+
+    def initlog(*args):
+        pass # remember to implement this!
+
