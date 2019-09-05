@@ -93,3 +93,33 @@ When `slicing` start is always included and end always excluded.
     >>> word[42:]
     ''
 Python strings are immutable (cannot be changed). `len()` returns length of string. 
+
+## 3.1.3 Lists
+
+List (mutable) might contain items of different types, can be extended (concatenation) and sliced. 
+All slice operations return new list containing requested elem-s (example below):
+
+    squares = [1, 4, 9, 16, 25]
+    squares[:]
+    [1, 4, 9, 16, 25]
+
+`append()` adds new item at the end of list. Assignment to slices is also possible:
+
+    letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g']
+    letters[2:5] = ['C', 'D', 'E']
+    letters
+    ['a', 'b', 'C', 'D', 'E', 'f', 'g']
+    letters[2:5] = []
+    letters
+    ['a', 'b', 'f', 'g']
+
+`len()` also works for lists. Possible to nest lists:
+
+    a = ['a', 'b', 'c']
+    n = [1, 2, 3]
+    x = [a, n]
+    x
+    [['a', 'b', 'c'], [1, 2, 3]]
+    x[0][1]
+    'b'
+
