@@ -145,9 +145,9 @@ Iterates over items of any sequence (list, string) in order they appear in seque
 
 If you need to modify sequence you are iterating over while, it is recommended to make a sequence copy firstly. With `for w in words:` would attempt to create infinite list, inserting `defenestrate` over and over again. The reason is that `words[:]` returned limited requested list of items that didn't increase (copy of `words`).
 
-    words = ['cat', 'window', 'defenestrate']
-    for w in words[:]:
-        if len(w) > 6:
-            words.insert(0, w)
-    words
+    >>> words = ['cat', 'window', 'defenestrate']
+    >>> for w in words[:]:
+    ...     if len(w) > 6:
+    ...     words.insert(0, w)
+    >>> words
     ['defenestrate', 'cat', 'window', 'defenestrate']
