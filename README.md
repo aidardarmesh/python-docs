@@ -24,6 +24,7 @@ Modules (scripts) are called by `python -m module [arg]`. To run script and open
 When known to interpreter, script name and additional arg-s thereafter are turned into list of strings and assigned to `argv` variable in `sys` module. 
 
     python3.7 test.py # import sys, print(sys.argv)
+    
     Output: ['test.py']
 
 ## 2.1.2 Interactive Mode
@@ -54,3 +55,4 @@ By default, Python source files are treated as UTF-8 encoded. To declare encodin
     >>> 5 ** 2
     25
 
+In interactive mode, last printed expression is assigned to `_` variable. 
