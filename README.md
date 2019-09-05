@@ -1,12 +1,15 @@
 # Python 3.7 [Tutorial](https://docs.python.org/3/tutorial/)
 
+## Intro
 Python is easy to use interpreted language. Works on Windows, Linux or Mac OS
 
 Python is extensible: if you know C language, it is easy to add new built-in function or 
 module to the interpreter, either to perform operations at maximum speed or link to libraries 
 that may only be available in binary form.
 
-Python interpreter is usually installed into `/usr/local/bin/python3.7`. *Putting binary to `/usr/local/bin` make possible to run it form terminal*:
+## 2.1 Invoking the Interpreter
+
+Python interpreter is usually installed into `/usr/local/bin/python3.7`. *Putting binary to `/usr/local/bin` makes possible to run it from terminal*:
 
     python 3.7
 
@@ -14,8 +17,9 @@ Python interpreter is usually installed into `/usr/local/bin/python3.7`. *Puttin
 
 Second way to start Python interpreter is `python -c "command [arg]"` (analogous to shell). You can use single or double quotes.
 
-Modules (scripts) are called by `python -m module [arg]`. To run script and open interactive mode `-i` flag is passed before script.
+Modules (scripts) are called by `python -m module [arg]`. To run script and open interactive mode pass `-i` flag before script name.
 
-    python 3.7 -m test.py
-    Output: Hello, world!
+## 2.1.1 Argument Passing
+
+When known to interpreter, script name and additional arg-s thereafter are turned into list of strings and assigned to `argv` variable in `sys` module. 
 
