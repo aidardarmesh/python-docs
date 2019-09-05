@@ -7,6 +7,7 @@ module to the interpreter, either to perform operations at maximum speed or link
 that may only be available in binary form.
 
 Python interpreter is usually installed into `/usr/local/bin/python3.7`. *Putting binary to `/usr/local/bin` make possible to run it form terminal*:
-    python 3.7
-`/usr/local/python` is also popular location
 
+    python 3.7
+
+`/usr/local/python` is also popular location
