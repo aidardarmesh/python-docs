@@ -56,7 +56,7 @@ In interactive mode, last printed expression is assigned to `_` variable:
 
 ## 3.1.2 Strings
 
-    >>> '"Isn**\\**'t," they said.'
+    >>> '"Isn\'t," they said.'
     '"Isn\'t," they said.'
     >>> print('"Isn\'t," they said.')
     "Isn't", they said.
@@ -69,7 +69,7 @@ In interactive mode, last printed expression is assigned to `_` variable:
 
 If you don't want char-s prefaced by **\\** to be interpreted as special char-s, you can make it `raw` by adding `r` before first quote:
 
-    >>> print('C:\some**\\n**ame') # here \n means newline!
+    >>> print('C:\some\name') # here \n means newline!
     C:\some
     ame
     >>> print(r'C:\some\name') # note r before quote
