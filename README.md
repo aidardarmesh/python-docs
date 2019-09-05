@@ -86,3 +86,9 @@ There is no separate `char` type. Character is string with size one.
 
 When `slicing` start is always included and end always excluded.
 
+`IndexError` exception does not raise when slicing:
+
+    word[4:42]
+    'on'
+    word[42:]
+    ''
