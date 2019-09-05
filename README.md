@@ -67,3 +67,11 @@ In interactive mode, last printed expression is assigned to `_` variable:
     First line.
     Second line.
 
+If you don't want char-s prefaced by **\** to be interpreted as special char-s, you can make it `raw` by adding `r` before first quote:
+
+    print('C:\some\name') # here \n means newline!
+    C:\some
+    ame
+    print(r'C:\some\name') # note r before quote
+    C:\some\name
+
