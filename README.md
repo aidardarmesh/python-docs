@@ -46,13 +46,13 @@ By default, Python source files are treated as UTF-8 encoded. To declare encodin
 * modulo (%) calculates remainder
 * power (**) calculates powers
 
-    >>> 17 / 3 # division
+    \>>> 17 / 3 # division
     5.666666666666667
-    >>> 17 // 3 # floor division
+    \>>> 17 // 3 # floor division
     5
-    >>> 17 % 3 #modulo
+    \>>> 17 % 3 #modulo
     2
-    >>> 5 ** 2
+    \>>> 5 ** 2
     25
 
 In interactive mode, last printed expression is assigned to `_` variable. 
