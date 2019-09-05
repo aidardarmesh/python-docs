@@ -88,7 +88,7 @@ When `slicing` start is always included and end always excluded.
 
 `IndexError` exception does not raise when slicing:
 
-    word[4:42]
+    >>> word[4:42]
     'on'
-    word[42:]
+    >>> word[42:]
     ''
