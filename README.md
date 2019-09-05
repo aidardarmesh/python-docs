@@ -123,3 +123,14 @@ All slice operations return new list containing requested elem-s (example below)
     >>> x[0][1]
     'b'
 
+## 3.2 First Steps Towards Programming
+
+*Multiple assignment*:
+
+    a, b = 0, 1
+    while (a < 10):
+        a, b = b, a+b
+
+In Python (like in C) non-zero `int` == True, 0 is False,
+non-zero length string (list) == True, empty == False,
+
