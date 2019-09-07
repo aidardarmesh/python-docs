@@ -312,3 +312,16 @@ Keyword arg-s MUST follow positional arg-s.
     parrot(**d)
     -- This parrot wouldn't VOOM if you put four million volts through it. E's bleedin' demised !
 
+## 4.7.5 Lambda Expressions
+
+Small anonymous func-s can be created with *lambda* keyword (it returns function objects):
+
+    def make_incrementor(n):
+        return lambda x: x + n
+
+    f = make_incrementor(42)
+    f(0)
+    42
+    f(1)
+    43
+
