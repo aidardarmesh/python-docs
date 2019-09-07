@@ -522,3 +522,15 @@ you can run module as a script
 
 `sys` is built-in in every Python interpreter. `sys.ps1` and `sys.ps2` are primary and secondary prompts. `sys.path` is list of str-s that determines interpreter's search path for modules. It is initialized to default path taken from env var `PYTHONPATH` or from built-in default when `PYTHONPATH` is not set. 
 
+## 6.3 dir() Function
+
+Is used to find out which names module defines:
+
+    a = [1, 2, 3, 4, 5]
+    import fibo
+    fib = fibo.fib
+    dir()
+    ['__builtins__', '__name__', 'a', 'fib', 'fibo', 'sys']
+
+Listed all names: var-s, modules, func-s, etc. BUT, it doesn't list names of built-in func-s and var-s. They are defined in module `builtins`
+
