@@ -386,3 +386,13 @@ Use `collections.deque` instead:
     queue
     ['Michael', 'Terry', 'Graham']
 
+## 5.1.3 List Comprehension
+
+List comprehension consists of brackets containing expression followed by `for` clause, then zero or more `for` or `if` clauses. The result will be new list resulting from evaluating expression:
+
+    squares = [x**2 for x in range(10)]
+    [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+
+    [(x, y) for x in [1, 2, 3] for y in [3, 1, 4] if x != y]
+    [(1, 3), (1, 4), (2, 3), (2, 1), (2, 4), (3, 1), (3, 4)]
+
