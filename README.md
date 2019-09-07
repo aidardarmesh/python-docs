@@ -463,3 +463,19 @@ Using keyword arg-s:
     dict(sape=4139, guido=4127, jack=4098)
     {'sape': 4139, 'guido': 4127, 'jack': 4098}
 
+## 5.6 Looping Techniques
+
+Use `items()` to get key and value when looping dictionary:
+
+    knights = {'gallahad': 'the pure', 'robin': 'the brave'}
+
+    for k, v in knights.items():
+        print(k, v)
+
+To loop through sequence, index and value can be retrieved by `enumerate()`:
+
+    for i, v in enumerate(['tic', 'tac', 'toe']):
+        print(i, v)
+
+`reversed` to loop in reverse order. `sorted` to loop sorted sequence. 
+
