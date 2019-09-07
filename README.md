@@ -444,3 +444,22 @@ Tuples are immutable and usually contain different type sequence of elem-s. Unpa
 
     x, y, z = t
 
+## 5.5 Dictionaries
+
+Keys are immutable. Tuples can be keys if they contain only strings, number or tuples: if tuple contains any mutable object either directly or indirectly , it cannot be used as keys. 
+
+`list(d)` on dictionary returns list of all keys. `dist()` builds dictionaries from sequences of key-value pairs:
+
+    dict([('sape', 4139), (guido, 4127)])
+    {'sape': 4139, 'guido': 4127}
+
+Dict comprehensions also can be used:
+
+    {x: x**2 for x in (2, 4, 6)}
+    {2: 4, 4: 16, 6: 36}
+
+Using keyword arg-s:
+    
+    dict(sape=4139, guido=4127, jack=4098)
+    {'sape': 4139, 'guido': 4127, 'jack': 4098}
+
