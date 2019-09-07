@@ -481,7 +481,7 @@ To loop through sequence, index and value can be retrieved by `enumerate()`:
 
 ## 6. Modules
 
-Module is file containing defitions and statements. Module name is file name without suffix `.py` attended. Withing a module, module's name (as string) is available as value of global variable `__name__`. 
+Module is file containing defitions and statements. Module name is file name without suffix `.py` attended. Within a module, module's name (as string) is available as value of global variable `__name__`. 
 
     import fibo # importing definitions and statements from fibo.py
 
@@ -503,4 +503,18 @@ Imported names directly, `fibo` is not defined.
 
     from fibo import fib as fibonacci
     fibonacci(500)
+
+## 6.1.1 Executing modules as scripts
+
+When running Python module with:
+
+    python fibo.py <arguments>
+
+code in module will be executed, just as if you imported it, but with `__name__` set to `__main__`. If you add next code to end of module:
+
+    if __name__ = '__main__":
+        import sys
+        fib(int(sys.argv[1]))
+
+you can run module as a script
 
