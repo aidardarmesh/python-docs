@@ -183,10 +183,10 @@ Arg-s are passed using *call by value* (where *value* is object *reference*, not
 
 Function name *user-defined* type. This value can be assigned to another name and used as function:
 
-    fib
+    >>> fib
     <function fib at 10042ed0>
-    f = fib
-    f(100)
+    >>> f = fib
+    >>> f(100)
     0 1 1 2 3 5 8 13 21 34 55 89
 
 Function without `return` statement (procedures) do return value `None`.
