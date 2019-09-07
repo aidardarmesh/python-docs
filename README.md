@@ -489,3 +489,18 @@ Module is file containing defitions and statements. Module name is file name wit
     fib = fibo.fib # if fibo.fib is often used, assigning to shorter name variable
     fib(1000)
 
+## 6.1 More on Modules
+
+    from fibo import fib, fib2
+    fib(500)
+
+Imported names directly, `fibo` is not defined.
+
+`as` makes pseudonames when importing:
+
+    import fibo as fib
+    fib.fib(500)
+
+    from fibo import fib as fibonacci
+    fibonacci(500)
+
