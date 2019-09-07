@@ -406,3 +406,17 @@ List comprehension consists of brackets containing expression followed by `for` 
     [[row[i] for row in matrix] for i in range(4)]
     [[1, 5, 9], [2, 6, 10], [3, 7, 11], [4, 8, 12]]
 
+## 5.2 del Statement
+
+Removes item at given index or slice:
+
+    a = [-1, 1, 66.25, 333, 333, 1234.5]
+    del a[0]
+    a
+    [1, 66.25, 333, 333, 1234.5]
+    del a[2:4]
+    [1, 66.25, 1234.5]
+    del a[:]
+    a
+    []
+
