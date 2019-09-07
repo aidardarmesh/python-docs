@@ -295,33 +295,33 @@ Keyword arg-s MUST follow positional arg-s.
 
 `*` operator unpacks arg-s out of list of tuple:
 
-    list(range(3, 6))
+    >>> list(range(3, 6))
     [3, 4, 5]
-    args = [3, 6]
-    list(range(*args))
+    >>> args = [3, 6]
+    >>> list(range(*args))
     [3, 4, 5]
 
 `**` unpacks arg-s out of dict:
 
-    def parrot(voltage, state='a stiff', action='voom'):
-        print("-- This parrot wouldn't", action, end=' ')
-        print("if you put", voltage, "volts through it.", end=' ')
-        print("E's", state, "!")
+    >>> def parrot(voltage, state='a stiff', action='voom'):
+    ...     print("-- This parrot wouldn't", action, end=' ')
+    ...     print("if you put", voltage, "volts through it.", end=' ')
+    ...     print("E's", state, "!")
 
-    d = {"voltage": "four million", "state": "bleedin' demised", "action": "VOOM"}
-    parrot(**d)
+    >>> d = {"voltage": "four million", "state": "bleedin' demised", "action": "VOOM"}
+    >>> parrot(**d)
     -- This parrot wouldn't VOOM if you put four million volts through it. E's bleedin' demised !
 
 ## 4.7.5 Lambda Expressions
 
 Small anonymous func-s can be created with *lambda* keyword (it returns function objects):
 
-    def make_incrementor(n):
-        return lambda x: x + n
+    >>> def make_incrementor(n):
+    ...     return lambda x: x + n
 
-    f = make_incrementor(42)
-    f(0)
+    >>> f = make_incrementor(42)
+    >>> f(0)
     42
-    f(1)
+    >>> f(1)
     43
 
