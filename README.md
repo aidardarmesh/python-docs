@@ -335,3 +335,37 @@ Small anonymous func-s can be created with *lambda* keyword (it returns function
 * Use spaces round operators and after commas
 * `UpperCamelCase` for classes and `lowercase_with_underscores` for func-s and methods. Always use `self`
 
+## 5.1 More on Lists
+
+`list.append(x)` adds item at the end of list
+
+`list.extend(iterable)` extends list by appending all items from iterable
+
+`list.insert(i, x)` inserts item at given position, so `a.insert(0, x)` inserts at the front of the list
+
+`list.remove(x)` removes first item from list whose value == x. Raises `ValueError` if there is no such item
+
+`list.pop([i])` removes item at given position and returns it. If no index is specified, `a.pop()` removes nd returns last item in list
+
+`list.clear()` removes all elem-s from list
+
+`list.index(x[, start[, end]])` returns zero-based index in list of first item whose value == x. Raises `ValueError` if there is no such item. *start* and *end* are used to limit search to particular subsequence. Returned index is relative to full list beginning, not to *start*
+
+`list.count(x)` returns number of items x appears in list
+
+`list.sort(key=None, reverse=False)` sorts items of list in place
+
+`list.reverse()` reverses elem-s of list in place
+
+`list.copy()` returns shallow copy of list. Equivalent to `a[:]`
+
+    fruits = ['orange', 'apple', 'pear', 'banana', 'kiwi', 'apple', 'banana']
+    fruits.count('apple')
+    2
+    fruits.count('tangerine')
+    0
+    fruits.index('banana')
+    3
+    fruits.index('banana', 4)
+    6
+
