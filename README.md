@@ -235,3 +235,31 @@ If you don't want default be shared with subsequent calls:
     [2]
     [3]
 
+## 4.7.2 Keyword Arguments
+
+Func-s can also be called using `keyword_argument=value`:
+
+    def parrot(voltage, state='a stiff', action='voom', type='Norwegian Blue'):
+        print("-- This parrot wouldn't", action, end=' ')
+        print("if you put", voltage, "volts through it.")
+        print("-- Lovely plumage, the", type)
+        print("-- It's", state, "!")
+
+Only `voltage` is required and other three arg-s are optional. Function can be called in next ways:
+
+    parrot(1000)
+    parrot(voltage=1000)
+    parrot(voltage=1000, action='VOOOM')
+    parrot(action='VOOOM', voltage=1000)
+    parrot('a million', 'a bereft of life', 'jump')
+    parrot('a thousand', state='pushing up the daisies')
+
+**BUT** following calls are *invalid*:
+
+    parrot()                    # required arg is missing
+    parrot(voltage=0.5, 'dead') # non-keyword arg after keyword arg
+    parrot(110, voltage=220)    # duplicate value for same argument
+    parrot(actor='John Cleese') # unknown keyword arg
+
+Keyword arg-s MUST follow positional arg-s. 
+
