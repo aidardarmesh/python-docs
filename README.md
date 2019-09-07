@@ -534,3 +534,14 @@ Is used to find out which names module defines:
 
 Listed all names: var-s, modules, func-s, etc. BUT, it doesn't list names of built-in func-s and var-s. They are defined in module `builtins`
 
+# 6.4 Packages
+
+Packages are a way of structuring Python's module namespace y using "dotted module names":
+
+    from sound.effects.echo import echofilter
+    echofilter(input, output, delay=0.7, atten=4)
+
+direct access to `echofilter` from module `echo`. When using `from package import item`, item can be either submodule (or subpackage) or some other name defined in package, like function or class or variable. `import` first tests whether item is defined in package; if not, it assumes it is module and attempts to load it. If it fails to find it, `ImportError` is raised.
+
+Contrarily, when using `import item.subitem.subsubitem`, each item except last must be package; last item can be module or package, but not class, function or variable defined in previous item.
+
