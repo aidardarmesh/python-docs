@@ -518,3 +518,7 @@ code in module will be executed, just as if you imported it, but with `__name__`
 
 you can run module as a script
 
+## 6.2 Standard Modules
+
+`sys` is built-in in every Python interpreter. `sys.ps1` and `sys.ps2` are primary and secondary prompts. `sys.path` is list of str-s that determines interpreter's search path for modules. It is initialized to default path taken from env var `PYTHONPATH` or from built-in default when `PYTHONPATH` is not set. 
+
