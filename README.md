@@ -545,3 +545,24 @@ direct access to `echofilter` from module `echo`. When using `from package impor
 
 Contrarily, when using `import item.subitem.subsubitem`, each item except last must be package; last item can be module or package, but not class, function or variable defined in previous item.
 
+## 7.1 Fancier Output Formatting
+
+Several ways:
+
+* begin string with `f` or `F` before opening quotation mark or triple quotation mark. Inside this string you can write Python expression between `{` and `}`:
+
+    year = 2006
+    event = 'Referendum'
+    f'Results of the {year} {event}'
+    'Results of the 2006 Referendum'
+
+* `str.format()` requires also information be formatted:
+
+    yes_votes = 42_572_654
+    no_votes = 43_132_495
+    percentage = yes_votes / (yes_votes + no_votes)
+    '{:-9} YES votes  {:2.2%}'.format(yes_votes, percentage)
+    ' 42572654 YES votes  49.67%'
+
+* handling by yourself by slicing and concatenation
+
