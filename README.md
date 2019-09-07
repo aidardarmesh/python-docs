@@ -289,3 +289,4 @@ Keyword arg-s MUST follow positional arg-s.
     client : John Cleese
     sketch : Cheese Shop Sketch
 
+`*name` should always be before `**name`
