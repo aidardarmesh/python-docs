@@ -177,3 +177,17 @@ Object returned by range() behaves as if it is a list, but in fact it isn't. It 
     def initlog(*args):
         pass # remember to implement this!
 
+## 4.6 Defining Functions
+
+Arg-s are passed using *call by value* (where *value* is object *reference*, not the value of object). 
+
+Function name *user-defined* type. This value can be assigned to another name and used as function:
+
+    fib
+    <function fib at 10042ed0>
+    f = fib
+    f(100)
+    0 1 1 2 3 5 8 13 21 34 55 89
+
+Function without `return` statement (procedures) do return value `None`.
+
