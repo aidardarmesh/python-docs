@@ -191,3 +191,47 @@ Function name *user-defined* type. This value can be assigned to another name an
 
 Function without `return` statement (procedures) do return value `None`.
 
+## 4.7.1 Default Argument Values
+
+`in` tests whether sequence contains certain value. 
+
+Default values are evaluated at the point of function definition in *defining* scope:
+
+    i = 5
+
+    def f(arg=i):
+        print(arg)
+
+    i = 6
+    f()
+
+**BUT**. When default value is mutable (list, dictionary or class instance), it accumulates arg-s on subsequent calls:
+
+    def f(a, L=[]):
+        L.append(a)
+        return L
+
+    print(f(1))
+    print(f(2))
+    print(f(3))
+
+    [1]
+    [1, 2]
+    [1, 2, 3]
+
+If you don't want default be shared with subsequent calls:
+
+    def f(a, L=None)
+        if L is None:
+            L = []
+        L.append(d)
+        return L
+
+    print(f(1))
+    print(f(2))
+    print(f(3))
+
+    [1]
+    [2]
+    [3]
+
