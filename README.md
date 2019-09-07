@@ -325,3 +325,13 @@ Small anonymous func-s can be created with *lambda* keyword (it returns function
     >>> f(1)
     43
 
+## 4.8 Intermezzo: Coding style
+
+* Use 4-space indentation and no tabs
+* Don't exceed 79 char-s
+* Use blank lines to separate func-s and classes, and larger block of code inside func-s
+* Put comments on line of their own
+* Use docstrings
+* Use spaces round operators and after commas
+* `UpperCamelCase` for classes and `lowercase_with_underscores` for func-s and methods. Always use `self`
+
