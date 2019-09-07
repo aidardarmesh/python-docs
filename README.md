@@ -566,3 +566,46 @@ Several ways:
 
 * handling by yourself by slicing and concatenation
 
+## 7.2 Reading and Writing Files
+
+`open()` returns file object:
+
+    f = open('workfile', 'w')
+
+When finished don't forget to `f.close()`. Instead use `with` because:
+
+* file is properly closed after its suite finishes, even if exception is raised
+* shorter than `try/finally`
+
+    with open('workfile') as f:
+        read_data = f.read()
+    f.closed
+    True
+
+`f.read(size)` reads some quantity of data and returns it as string (in text mode) or bytes object (in binary mode). When size is ommitted or negative, entire content of file will be read and returned. If end of file is reached, '' is returned:
+
+    f.read()
+    'This is the entire file.\n'
+    f.read()
+    ''
+
+`f.readline()` reads single line from file. If returns '', end of file reached, while blank line is represented by '\n' is a string containing only single newline.
+
+For reading lines from file:
+
+    for line in f:
+        print(line, end='')
+    This is the first line of the file.
+    Second line of the file
+
+To read all lines of file: `list(f)` or `f.readlines()`.
+
+`f.write(string)` writes contents of *string* to file, returning number of char-s written:
+
+    f.write('This is a test\n')
+    15
+
+`f.tell()` returns integer giving file object's current position in file represented as number of bytes from beginning of file in binary mode and opaque number when in text mode. 
+
+`f.seek(offset, from_what)` changes file object's position. Position is computed from adding *offset* to ref-ce point; ref-ce point is selected by *from_what* arg. *from_what* 0 is beginning of file (default), 1 is current position and 2 is end of file. 
+
