@@ -420,3 +420,27 @@ Removes item at given index or slice:
     a
     []
 
+## 5.3 Tuple and Sequences
+
+Tuple consists of number of values separated by commas:
+
+    t = 12345, 54321, 'hello' # example of tuple packing
+    t[0]
+    12345
+    t
+    (12345, 54321, 'hello')
+    u = t, (1, 2, 3, 4, 5)
+    ((12345, 54321, 'hello'), (1, 2, 3, 4, 5))
+    empty = ()
+    singleton = 'hello',
+    len(empty)
+    0
+    len(singleton)
+    1
+    singleton
+    ('hello',)
+
+Tuples are immutable and usually contain different type sequence of elem-s. Unpacking requires as many equal elem-s number on both sides of equal sign.
+
+    x, y, z = t
+
