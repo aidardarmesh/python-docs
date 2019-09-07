@@ -479,3 +479,13 @@ To loop through sequence, index and value can be retrieved by `enumerate()`:
 
 `reversed` to loop in reverse order. `sorted` to loop sorted sequence. 
 
+## 6. Modules
+
+Module is file containing defitions and statements. Module name is file name without suffix `.py` attended. Withing a module, module's name (as string) is available as value of global variable `__name__`. 
+
+    import fibo # importing definitions and statements from fibo.py
+
+    fibo.fib(1000)
+    fib = fibo.fib # if fibo.fib is often used, assigning to shorter name variable
+    fib(1000)
+
