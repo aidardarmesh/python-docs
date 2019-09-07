@@ -369,3 +369,20 @@ Small anonymous func-s can be created with *lambda* keyword (it returns function
     fruits.index('banana', 4)
     6
 
+## 5.1.2 Using Lists as Queues
+
+It is possible to use list as queue (FIFO), however list is not efficient for this purpose. While `append` and `pop` from the end are fast, `insert` or `pop` from beginnig are slow (because all other elem-s are shifted by one)
+
+Use `collections.deque` instead:
+
+    from collections import deque
+    queue = deque(['Eric', 'John', 'Michael'])
+    queue.append('Terry')
+    queue.append('Graham')
+    queue.popleft()
+    'Eric'
+    queue.popleft()
+    'John'
+    queue
+    ['Michael', 'Terry', 'Graham']
+
