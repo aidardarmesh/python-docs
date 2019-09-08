@@ -671,3 +671,30 @@ Namespaces are created at different moments and have different lifetimes. Namesp
 
 *Scope* is textual region where namespace is directly accessible. 
 
+Only operations understood by instance objects are attribute references: data attributes and methods. Data attributes need not to be declared. 
+
+`MyClass.f` is *method object*, not function:
+
+    xf = x.f
+    while True:
+        print(xf())
+
+Often, first arg of method is `self`. There is nothing more than convention: name `self` has no special meaning to Python. 
+
+It is not necessary that func definition is textually enclosed in class definition: assigning func object to local variable in class is also OK:
+
+    def f1(self, x, y):
+        return min(x, x+y)
+
+    class C:
+        f = f1
+
+        def g(self):
+            return 'hello world'
+
+        h = g
+
+Not `f`, `g` and `h` are attributes of class C. Methods may ref-ce global names in same way as ordinary func-s. 
+
+Each value is an object, and therefore has a *class* (also called type). It is stored as `object.__class__`.
+
