@@ -653,3 +653,21 @@ To create specific Exception class:
 
 `finally` always executes before leaving `try` statement whether exception has raised or not. When exception as occured in `try` clause and has not been handled by `except` clause, it is re-raised after `finally` clause has been executed. `finally` is executed "on the way out" when `try` statement is left via `break`, `continue` or `return`. 
 
+## 9 Classes
+
+*namespace* is mapping from names to objects. Most namespaces are currently implemented as Python dictionaries. Examples:
+
+* set of built-in names (abs(), built-in exception names)
+* global names in module
+* local names in function invocation
+
+Set of attributes of object also form namespace. **NOTE** there is absolutely no relation between names n different namespaces: 2 modules may have `maximize` func - users of module must prefix it with module name.
+
+Namespaces are created at different moments and have different lifetimes. Namespace containing `built-in names` is created when Python *interpreter starts up and is never deleted*.
+
+*Global namespace* for module is created when module definition is read in and last until interpreter quits. 
+
+*Local namespace* for func is created when func is called and is deleted when func returns or raises an exception that is not handled within func. Recursive invocations each have their own local namespace.
+
+*Scope* is textual region where namespace is directly accessible. 
+
