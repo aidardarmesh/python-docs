@@ -720,3 +720,7 @@ Search for attributes inherited from parent class is depth-first, left-to-right,
 
 Private variables don't exist in Python. However, convention: name prefixed with underscore should be treated as non-public part of API.
 
+## 9.8 Iterators
+
+`for` calls `iter()` on container object. Func returns iterator object that defines method `__next__()` which assesses elem-s in container one at a time. When there are no more elem-s, `StopIteration` is raised. `__next__()` can be called using `next()` func.
+
