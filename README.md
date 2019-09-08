@@ -724,3 +724,11 @@ Private variables don't exist in Python. However, convention: name prefixed with
 
 `for` calls `iter()` on container object. Func returns iterator object that defines method `__next__()` which assesses elem-s in container one at a time. When there are no more elem-s, `StopIteration` is raised. `__next__()` can be called using `next()` func.
 
+## 9.9 Generators
+
+Are written like regular func-s, but use `yield` to return data:
+
+    def reverse(data):
+        for index in range(len(data)-1, -1, -1):
+            yield data[index]
+
