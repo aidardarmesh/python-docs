@@ -698,3 +698,25 @@ Not `f`, `g` and `h` are attributes of class C. Methods may ref-ce global names 
 
 Each value is an object, and therefore has a *class* (also called type). It is stored as `object.__class__`.
 
+Syntax for derived class:
+
+    class DerivedClassName(BaseClassName):
+        <statement-1>
+        ...
+        <statement-n>
+
+If requested attribute in derived class is not found, search proceeds in base class. 
+
+Derived class may override methods of their base classes. To call base class method directly `BaseClassName.methodname(self, arg-s)`.
+
+Python supports multiple inheritance:
+
+    class DerivedClassName(Base1, Base2, Base3):
+        <statement-1>
+        ...
+        <statement-n>
+
+Search for attributes inherited from parent class is depth-first, left-to-right, not searching twice in same class where there is overlap in hierarchy. If attribute is not found in `DerivedClassName`, it is searched in `Base1` and its bases and if not found => `Base2` and etc. 
+
+Private variables don't exist in Python. However, convention: name prefixed with underscore should be treated as non-public part of API.
+
