@@ -609,3 +609,47 @@ To read all lines of file: `list(f)` or `f.readlines()`.
 
 `f.seek(offset, from_what)` changes file object's position. Position is computed from adding *offset* to ref-ce point; ref-ce point is selected by *from_what* arg. *from_what* 0 is beginning of file (default), 1 is current position and 2 is end of file. 
 
+## 8 Errors and Exceptions
+
+There are 2 kinds of errors: *syntax errors* and *exceptions*. 
+
+## 8.2 Exceptions
+
+Errors detected during execution are called *exceptions* and are not always fatal (if handled).
+
+`try` works as follows:
+
+* code between `try` and `except` is executed
+* if no exception occurs, `except` is skipped
+* if exception occurs, rest of `try` is skipped. If exception type matches one that is in `except`, this clause is executed
+* if exception type does not match, it is passed to outer `try` statement. If no handler found, it is *unhandled exception* and execution stops
+
+`try ... except` statement as optional `else` , which when present, must follow all except clauses. Code in `else` is executed, when exception was not raised:
+
+    for arg in sys.argv[1:]:
+        try:
+            f = open(arg, 'r')
+        except OSError:
+            print('cannot open', arg)
+        else:
+            print(arg, 'has', len(f.readlines()), 'lines')
+            f.close()
+
+`raise` forces specified exception to occur:
+
+    raise NameError('HiThere)
+
+To create specific Exception class:
+
+    class Error(Exception):
+        """Base class for exceptions in this module."""
+        pass
+    
+    class InputError(Error):
+        """Exception raised for errors in the input."""
+        def __init__(self, expression, message):
+            self.expression = expression
+            self.message = message
+
+`finally` always executes before leaving `try` statement whether exception has raised or not. When exception as occured in `try` clause and has not been handled by `except` clause, it is re-raised after `finally` clause has been executed. `finally` is executed "on the way out" when `try` statement is left via `break`, `continue` or `return`. 
+
